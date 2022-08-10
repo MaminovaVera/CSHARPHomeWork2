@@ -12,7 +12,7 @@ int Prompt(string message)
 int userNum = Prompt("Введите число > ");
 int third = userNum % 10;
 Console.WriteLine(userNum);
-if (userNum >= 100 && userNum < 1000)
+if (userNum >= 100)
 {
     Console.WriteLine(third);
 }
