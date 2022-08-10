@@ -1,5 +1,5 @@
 ﻿//Напишите программу, которая принимает на вход трёхзначное число и на выходе 
-//показывает последнюю цифру этого числа.
+//показывает вторую цифру этого числа.
 
 int Prompt(string message)
 {
@@ -10,6 +10,5 @@ int Prompt(string message)
 }
 
 int userNum = Prompt("Введите 3-х значное число > ");
-
-int result = userNum /10 % 10;
+int result = userNum / 10 % 10;
 Console.WriteLine(result);
