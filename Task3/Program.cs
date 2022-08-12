@@ -1,5 +1,5 @@
 ﻿// Напишите программу, которая выводит третью цифру заданного 
-//числа или сообщает, что третьей цифры нет.
+// числа или сообщает, что третьей цифры нет.
 
 int Prompt(string message)
 {
@@ -9,12 +9,20 @@ int Prompt(string message)
     return result;                          // Возвращает результат
 }
 
-int userNum = Prompt("Введите число > ");
-int third = userNum % 10;
-Console.WriteLine(userNum);
-if (userNum >= 100)
+int Show3digit(int value)
 {
-    Console.WriteLine(third);
+    while (value > 1000)
+    {
+        value = value / 10;
+    }
+    int result = value % 10;
+    return result;
+}
+int value = Prompt("Введите число ");
+if (value > 99)
+{
+    int result = Show3digit(value);
+    System.Console.WriteLine(result);
 }
 else
 {

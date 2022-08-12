@@ -8,18 +8,21 @@ int Prompt(string message)
     return result;                          // Возвращает результат
 }
 
-int userNum = Prompt("Введите число  от 1 до 7 > ");
-string[] workday = { "Понедельник", "Вторник", "Среда","Четверг",
-"Пятница"};
-string[] weekend = {"Суббота", "Воскресенье"};
+int DayOfWeek = Prompt($"Введите номер дня недели  > ");
 
-if (userNum < 5)
+if (DayOfWeek < 1 || DayOfWeek > 7)
 {
-    Console.WriteLine("Рабочий день");
+    Console.WriteLine("Это не день недели ");
+    return;
+}
+if (DayOfWeek == 6 || DayOfWeek == 7)
+{
+    Console.WriteLine("Да");
+
 }
 else
 {
-    Console.WriteLine("Выходной день");
+    Console.WriteLine("Нет");
 }
 
 
