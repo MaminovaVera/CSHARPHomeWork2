@@ -9,6 +9,20 @@ int Prompt(string message)
 }
 
 int userNum = Prompt("Введите число  от 1 до 7 > ");
+string[] workday = { "Понедельник", "Вторник", "Среда","Четверг",
+"Пятница"};
+string[] weekend = {"Суббота", "Воскресенье"};
+
+if (userNum < 5)
+{
+    Console.WriteLine("Рабочий день");
+}
+else
+{
+    Console.WriteLine("Выходной день");
+}
+
+
 
 
 

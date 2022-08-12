@@ -8,7 +8,19 @@ int Prompt(string message)
     int result = int.Parse(readValue);      // Преобрадует строку в целое число
     return result;                          // Возвращает результат
 }
+void ShowSecondDigit(int userNum)
+{
+    if (userNum >= 100 && userNum < 1000)
+    {
+        int result = userNum / 10 % 10;
+        Console.WriteLine(result);
+    }
+    else
+    {
+        Console.WriteLine("Число не 3-х значное");
+    }
+}
 
-int userNum = Prompt("Введите 3-х значное число > ");
-int result = userNum / 10 % 10;
-Console.WriteLine(result);
+
+int value = Prompt("Введите 3-х значное число > ");
+ShowSecondDigit(value);
